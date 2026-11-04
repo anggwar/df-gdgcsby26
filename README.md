@@ -1,6 +1,6 @@
 # Build Apps with Stitch + Google AI Studio 🍜✨
 
-### Workshop Project — "AnakKost Eats"
+### Workshop Project: "AnakKost Eats"
 *From Prompt to Production: Build and ship a student food discovery app to Google Cloud Run in 90 minutes.*
 
 ---
@@ -61,7 +61,7 @@ By the end of this 90-minute workshop, you will:
 | **10–30 min** | Design in Stitch | Prompt screens, iterate styling, export | 2 UI screens |
 | **30–65 min** | Build in AI Studio | Wire Gemini Flash, grounding, and cache | Interactive app |
 | **65–80 min** | Deploy to Cloud Run | 1-click build and live container generation | Live `*.a.run.app` URL |
-| **80–90 min** | Demo Showdown | Scan QR codes, vote, award prizes | Winner crowned |
+| **80–90 min** | Demo Showdown |
 
 ---
 
