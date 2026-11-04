@@ -7,7 +7,7 @@
 
 ## 0. Overview
 
-In this hands-on workshop, you will build **AnakKost Eats** — a survival food finder tailored for college students in Surabaya (ITS, UNAIR, UPN, UBAYA, Petra). 
+In this hands-on workshop, you will build **AnakKost Eats** a survival food finder tailored for college students in Surabaya. 
 
 Instead of writing backend code or wrangling complex cloud configurations, you will use:
 - **Google Stitch ("Front of House"):** To visually generate and iterate responsive mobile interfaces using plain text.
@@ -20,7 +20,7 @@ Instead of writing backend code or wrangling complex cloud configurations, you w
 
 * How to design full UI flows with natural language in **Google Stitch**.
 * How to use the direct **"Build with AI Studio"** handover bridge.
-* How to power dynamic discovery using **Gemini 3.6 Flash / 3.8 Flash** with live Google Search & Maps Grounding.
+* How to power dynamic discovery using **3.8 Flash** with live Google Search & Maps Grounding.
 * How to prompt an AI agent to build a client-side **IndexedDB / LocalStorage cache** to save tokens.
 * How to deploy a live web app directly to **Google Cloud Run**.
 * How to troubleshoot UI/logic bugs using the **Screenshot Debug Protocol** without inspecting code.
