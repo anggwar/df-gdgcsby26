@@ -4,12 +4,13 @@ Learn how to design, wire, and deploy a full-stack student food finder app to Go
 
 ---
 
-## 1. Architecture Overview
+## 1. Architecture & The Mental Model
 
-We separate the application into two clear roles:
+Before touching the keyboard, understand the roles. Most software projects stall because people try to do everything in one place. We separate concerns into **Front of House** and **The Kitchen Engine**:
 
-* **Front of House (Google Stitch):** Visual layout, typography, responsive card containers, buttons, and color schemes.
+* **Front of House (Google Stitch):** Visual layout, typography, responsive card containers, buttons, and campus street aesthetic. No manual CSS or HTML coding.
 * **The Kitchen Engine (Google AI Studio):** State management, API bindings to Gemini 3.6 Flash / 3.8 Flash with live Google Search & Maps grounding, local caching, and cloud deployment.
+* **The Host (Google Cloud Run):** Serverless infrastructure provisioning an instant HTTPS production container.
 
 ```text
 +-----------------------+      Direct Export      +------------------------+      1-Click Deploy      +-----------------------+
@@ -23,6 +24,8 @@ We separate the application into two clear roles:
                                                     | - IndexedDB Cache |
                                                     +-------------------+
 ```
+
+> 💡 **The Business Lens:** We use a student food finder as our workshop sandbox, but this exact pattern solves the **"Human Router Bottleneck"** (taking messy customer input, running decision rules, and generating output). When you finish, check [challenge.md](./challenge.md) to apply this to your own business operations.
 
 ---
 
@@ -108,8 +111,8 @@ Implement dynamic discovery with Gemini 3.6 Flash / 3.8 Flash:
 ```
 
 ### 4.3 Test Interactivity
-* In the live preview pane, test the campus dropdown and category filters.
-* Click **"Pilihin Makan Dong Cak!"** to verify the modal triggers with advice in Surabaya student slang.
+- In the live preview pane, test the campus dropdown and category filters.
+- Click **"Pilihin Makan Dong Cak!"** to verify the modal triggers with advice in Surabaya student slang.
 
 ---
 
@@ -117,15 +120,23 @@ Implement dynamic discovery with Gemini 3.6 Flash / 3.8 Flash:
 
 If something doesn't work or an element looks misaligned, do not open Developer Tools or inspect code. Use the **Screenshot Debug Protocol**:
 
-1. **Capture:** Take a screenshot snippet of the broken element or layout.
-2. **Attach:** Paste or drag the image directly into the AI Studio prompt console.
-3. **Prompt:** Describe what didn't happen:
-   ```text
-   The button highlighted in this screenshot does not open the modal on click. Inspect the event handlers and ensure clicking it opens the modal with the chosen warung details.
-   ```
+```text
+┌───────────────────────┐
+│ 1. Capture Screenshot │  Grab a crop of the broken UI element or visual defect.
+└───────────┬───────────┘
+            │
+            ▼
+┌───────────────────────┐
+│ 2. Paste in AI Studio │  Attach the image directly into the AI Studio prompt box.
+└───────────┬───────────┘
+            │
+            ▼
+┌───────────────────────┐  "The button marked here does not trigger state updates.
+│ 3. Execute Prompt     │  Inspect event handlers and ensure clicking it immediately
+└───────────────────────┘  displays the result container."
+```
 
 ### Common Quick Fixes
-
 * **Filter Doesn't Update:**
   ```text
   Clicking the filter chips does not update the card grid. Verify the active state tracking and ensure the card list re-renders based on the selected tag.
@@ -159,3 +170,10 @@ If something doesn't work or an element looks misaligned, do not open Developer 
    * **Most Authentic Persona:** Funniest and most accurate Surabaya slang.
    * **Best Interaction:** Fastest filter response and seamless caching.
    * **Speed to Ship:** First apps successfully running live on Cloud Run!
+
+---
+
+## 8. What's Next?
+
+* **Official Patterns:** Review the [Google AI Build Handbook](https://g.dev/ai/build) for production guidelines.
+* **Take the Business Challenge:** Read [challenge.md](./challenge.md) to learn how to adapt this architecture into an automated quote engine, SOP triage tool, or Antigravity agent.
