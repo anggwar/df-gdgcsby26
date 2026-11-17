@@ -9,13 +9,13 @@ Learn how to design, wire, and deploy a full-stack student food finder app to Go
 Before touching the keyboard, understand the roles. Most software projects stall because people try to do everything in one place. We separate concerns into **Front of House** and **The Kitchen Engine**:
 
 * **Front of House (Google Stitch):** Visual layout, typography, responsive card containers, buttons, and campus street aesthetic. No manual CSS or HTML coding.
-* **The Kitchen Engine (Google AI Studio):** State management, API bindings to Gemini 3.6 Flash / 3.8 Flash with live Google Search & Maps grounding, local caching, and cloud deployment.
+* **The Kitchen Engine (Google AI Studio):** State management, API bindings to Gemini 4 Hydrogen with live Google Search & Maps grounding, local caching, and cloud deployment.
 * **The Host (Google Cloud Run):** Serverless infrastructure provisioning an instant HTTPS production container.
 
 ```text
 +-----------------------+      Direct Export      +------------------------+      1-Click Deploy      +-----------------------+
 |     Google Stitch     | ----------------------> |    Google AI Studio    | -----------------------> |   Google Cloud Run    |
-| (UI / Visual Canvas)  |   "Build with AI"       | (Gemini 3.6/3.8 Flash) |       "Deploy App"       |   (Live Public URL)   |
+| (UI / Visual Canvas)  |   "Build with AI"       | (Gemini 4 Hydrogen)    |       "Deploy App"       |   (Live Public URL)   |
 +-----------------------+                         +------------------------+                          +-----------------------+
                                                               |
                                                     +---------+---------+
@@ -100,9 +100,9 @@ Ensure clicking campus selector or filter chips immediately filters these cards.
 Next, instruct AI Studio to connect dynamic live data and client caching:
 
 ```text
-Implement dynamic discovery with Gemini 3.6 Flash / 3.8 Flash:
+Implement dynamic discovery with Gemini 4 Hydrogen:
 1. Grounding: Enable Google Search and Google Maps grounding tools.
-2. Discovery Trigger: When user selects a campus zone or enters a custom search (e.g., 'nasi kulit unair', 'kopi giras nugas'), query Gemini 3.6 Flash / 3.8 Flash with system prompt:
+2. Discovery Trigger: When user selects a campus zone or enters a custom search (e.g., 'nasi kulit unair', 'kopi giras nugas'), query Gemini 4 Hydrogen with system prompt:
 "You are Senior Kampus Surabaya, a veteran student guide. Return realistic student warungs and late-night spots around Surabaya universities (ITS, UNAIR, UPN, Petra) matching the query. Include estimated price under Rp 25.000, distance, signature dish, and 1 short funny review in Surabaya casual slang (rek, mantep pol, nambah nasi)."
 3. Cache Engine:
 - Before firing an API call, check browser IndexedDB / LocalStorage under key 'anakkost_eats_cache'.
