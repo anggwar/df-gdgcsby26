@@ -56,7 +56,7 @@ Before writing a single prompt, evaluate your workflow through this 4-step frame
 
 - How to translate a real operational process into a responsive UI with **Google Stitch**.
 - How to execute the direct **"Build with AI Studio"** handover bridge without exporting code files.
-- How to power dynamic discovery using **Gemini 3.6 Flash / 3.8 Flash** with live Google Search & Maps Grounding.
+- How to power dynamic discovery using **Gemini 4 Hydrogen** with live Google Search & Maps Grounding.
 - How to prompt an AI agent to build a client-side **IndexedDB / LocalStorage cache** to eliminate redundant API roundtrips and cut token costs.
 - How to deploy a live web app directly to **Google Cloud Run** in 1 click.
 - How to troubleshoot UI/logic bugs using the **Screenshot Debug Protocol** without inspecting code.
