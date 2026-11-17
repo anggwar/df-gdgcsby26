@@ -30,7 +30,7 @@ Be brutally honest with impact metrics. If it doesn't move a needle, pick anothe
 ### 3. What kind of solution will you build?
 Map out the two halves of your architecture:
 * **The Front of House (Stitch):** Who is the user? (Field technician on mobile, desk-bound account rep, or external client?)
-* **The Kitchen Engine (AI Studio + Gemini Flash):** What decision rules or grounded lookups must it execute?
+* **The Kitchen Engine (AI Studio + Gemini 4 Hydrogen/Carbon/Argon):** What decision rules or grounded lookups must it execute?
 * **The Output:** What single ticket, quotation table, or database entry needs to be created?
 
 ---
