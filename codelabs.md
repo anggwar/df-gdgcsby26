@@ -40,7 +40,7 @@ Create a modern mobile web app called "AnakKost Eats" - Surabaya Student Food Su
 Aesthetic: High-energy street style with deep navy slate background and electric lime/amber badges.
 
 Screen 1: Campus Food Feed
-- Header: App name "AnakKost Eats" with campus selector dropdown ("Keputih/Gebang ITS", "Dharmawangsa UNAIR", "Siwalankerto Petra", "Rungkut UPN").
+- Header: App name "AnakKost Eats" with campus selector dropdown ("Keputih/Gebang ITS", "Dharmawangsa UNAIR", "Siwalankerto Petra", "Rungkut UPN") add campus from knowledge.
 - Hero Banner: Headline "Tanggal Tua Tetap Makan Enak!" with subtitle "Kurasi warung porsi kuli, murah meriah, ramah dompet mahasiswa."
 - Filter Chips:
   * "Porsi Kuli (<20rb)"
@@ -92,6 +92,8 @@ Populate the app with these iconic Surabaya student food spots as initial defaul
 3. Soto Ayam Barokah (Keputih Tegal) - Soto kuah koya gurih melimpah, Rp 15.000, 4.8 bintang.
 4. Tahu Telur Pak Jayen (Dharmahusada UNAIR B) - Tahu telur bumbu petis jumbo, Rp 20.000, 4.9 bintang.
 5. Ayam Geprek Joder (Gebang ITS) - Pedas nampol level bebas, free refill nasi, Rp 14.000, 4.8 bintang.
+
+add more selection to make it at least 50, use other campus as well
 
 Ensure clicking campus selector or filter chips immediately filters these cards.
 ```
